@@ -3,7 +3,7 @@
 - 🌱 I’m currently learning Artificial Intelligence and Data Science
 - 💞️ I’m looking to collaborate on Projects related to ML & DS
 - 📫 Reach me on my email : apghatage@gmail.com
-- My instagram handle is datawithaditya
+- My instagram handle is https://www.instagram.com/datawithaditya/
 
 <!---
 Aditya74747/Aditya74747 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
