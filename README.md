@@ -2,13 +2,13 @@
 👋 Hi, I’m @Aditya74747  <br>👀 I’m interested in Data Science, Machine Learning, and AI-driven solutions  <br>🌱 I’m currently learning Artificial Intelligence and Advanced Data Analytics  <br>💞️ I’m looking to collaborate on projects related to Machine Learning, Data Science, and Automation  <br>📊 I enjoy building data models, ML pipelines, and turning complex data into actionable insights  <br>📫 Reach me at: apghatage@gmail.com
 
 
-## 🌐 Socials:
+##🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/aditya_747_) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/aditya-ghatage-136086221/) [![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@apghatage) 
 
 
 # 💻 Tech Stack
 
-## 🧠 Programming Languages & Markup
+# 🧠 Programming Languages & Markup
 ![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=ffdd54)
 ![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white)
@@ -19,7 +19,7 @@
 ![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=flat&logo=latex&logoColor=white)
 
 
-## 📚 Libraries & Frameworks
+#📚 Libraries & Frameworks
 ![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=flat&logo=apachespark&logoColor=white)
 ![Anaconda](https://img.shields.io/badge/Anaconda-44A833?style=flat&logo=anaconda&logoColor=white)
 ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4EAA25?style=flat)
