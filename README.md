@@ -6,6 +6,11 @@
 <br>📊 I enjoy building data models, ML pipelines, and turning complex data into actionable insights  
 <br>📫 Reach me at: apghatage@gmail.com
 
+#  About Me:
+Results-driven and business-focused Data Analyst with a solid foundation in Artificial Intelligence and Data Science. Skilled in Data
+Science, Machine Learning, Natural Language Processing, Deep Learning and AI. Leveraging technical expertise and leadership skills in
+leading projects and fostering collaborative environments for data driven decision making. Combining strong technical acumen with
+business domain to align data strategy with organizational goals.
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/aditya_747_) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/aditya-ghatage-136086221/) [![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@apghatage) 
