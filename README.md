@@ -8,7 +8,7 @@
 
 # 💻 Tech Stack
 
-**🧠 Programming Languages & Markup**
+### 🧠 Programming Languages & Markup
 ![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=ffdd54)
 ![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat&logo=html5&logoColor=white)
@@ -20,7 +20,7 @@
 
 
 
-**📚 Libraries & Frameworks**
+### 📚 Libraries & Frameworks
 ![Apache Spark](https://img.shields.io/badge/Apache%20Spark-E25A1C?style=flat&logo=apachespark&logoColor=white)
 ![Anaconda](https://img.shields.io/badge/Anaconda-44A833?style=flat&logo=anaconda&logoColor=white)
 ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-4EAA25?style=flat)
