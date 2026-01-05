@@ -1,12 +1,17 @@
-# 💫 About Me:
-👋 Hi, I’m @Aditya74747  <br>👀 I’m interested in Data Science, Machine Learning, and AI-driven solutions  <br>🌱 I’m currently learning Artificial Intelligence and Advanced Data Analytics  <br>💞️ I’m looking to collaborate on projects related to Machine Learning, Data Science, and Automation  <br>📊 I enjoy building data models, ML pipelines, and turning complex data into actionable insights  <br>📫 Reach me at: apghatage@gmail.com
+# 💫 TL;DR:
+👋 Hi, I’m @Aditya74747  
+<br>👀 I’m interested in Data Science, Machine Learning, and AI-driven solutions  
+<br>🌱 I’m currently learning Artificial Intelligence and Advanced Data Analytics  
+<br>💞️ I’m looking to collaborate on projects related to Machine Learning, Data Science, and AI  
+<br>📊 I enjoy building data models, ML pipelines, and turning complex data into actionable insights  
+<br>📫 Reach me at: apghatage@gmail.com
 
 
 ## 🌐 Socials:
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/aditya_747_) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/https://www.linkedin.com/in/aditya-ghatage-136086221/) [![Medium](https://img.shields.io/badge/Medium-12100E?logo=medium&logoColor=white)](https://medium.com/@apghatage) 
 
 
-# 💻 Tech Stack
+## 💻 Tech Stack
 
 ### 🧠 Programming Languages & Markup
 ![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=ffdd54)
