@@ -3,7 +3,6 @@
 
 <p align="left">
 <a href="https://linkedin.com/in/ghatage"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-<a href="https://medium.com/@apghatage"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white" alt="Medium"/></a>
 <a href="mailto:apghatage@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
 </p>
 
@@ -29,11 +28,6 @@ An AI agent backed by three MCP servers I built: DuckDB SQL, hybrid BM25 + embed
 **[Employee Policies & Compliance RAG](https://github.com/Aditya74747/REPO-NAME)**
 A fully offline RAG assistant for employee handbooks, HR policies, IT-use guidelines and compliance SOPs, so confidential documents never leave local infrastructure. It loads PDF/DOCX/TXT, uses overlapping chunks, local `nomic-embed-text` embeddings and ChromaDB top-K retrieval, and answers with Llama 3.1 8B through a grounded prompt. **Every answer cites its source file and chunk.**
 <br>`Python` `LangChain` `Ollama` `ChromaDB` `Jupyter` `uv`
-
-**[Sentiment Analysis with LLMs](https://github.com/Aditya74747/REPO-NAME)** · *research project & co-authored paper*
-A year-long comparison of a lexicon-based approach (VADER), 8 supervised ML models on TF-IDF features, and LLMs (Gemma, LLaMA) on Sentiment140's 1.6M tweets. The fine-tuned Gemma model reached **88% accuracy**, against 81% for VADER and 62% for Gradient Boosting. Includes an app interface for the results and emotion classification.
-<br>`Python` `Hugging Face` `Scikit-learn` `NLTK`
-
 ---
 
 ## 💼 Experience
@@ -54,7 +48,6 @@ A year-long comparison of a lexicon-based approach (VADER), 8 supervised ML mode
 - **B.E. in Artificial Intelligence & Data Science**, Pune University, GPA 9.2/10.
 
 ---
-
 
 ## 🛠️ Tech Stack
 
