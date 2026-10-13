@@ -55,12 +55,6 @@ A year-long comparison of a lexicon-based approach (VADER), 8 supervised ML mode
 
 ---
 
-## ✍️ Latest Blogs
-
-<!-- BLOG-POST-LIST:START -->
-<!-- BLOG-POST-LIST:END -->
-
----
 
 ## 🛠️ Tech Stack
 
