@@ -16,15 +16,14 @@ Lately I've been most interested in the parts that decide whether an AI system c
 ---
  
 ## 🚀 Featured Projects
- 
-<!-- TODO: replace REPO-NAME with the real repository names -->
- 
-**[MCP Agent Database](https://github.com/Aditya74747/REPO-NAME)**
+
+
+**[MCP Agent Database](https://github.com/Aditya74747/mcp-agent-database)**
 An AI agent backed by three MCP servers I built: DuckDB SQL, hybrid BM25 + embedding document search, and a sandboxed file workspace. It runs on local Ollama models or Claude/OpenAI. The safety layer requires human approval for any non-read-only action, validates SQL by parsing it rather than pattern-matching, sandboxes file paths, writes a JSONL audit log, and is tested against a prompt-injection document.
 → Benchmarked on 14 tasks with local Qwen3 8B: **79% overall, 100% safety, 0 unsafe actions**. FastAPI web UI + CLI, Docker, 110 tests.
 <br>`Python` `MCP SDK` `FastAPI` `DuckDB` `Ollama` `Docker` `pytest`
  
-**[Employee Policies & Compliance RAG](https://github.com/Aditya74747/REPO-NAME)**
+**[Employee Policies & Compliance RAG](https://github.com/Aditya74747/Employee-Policies-and-Compliance-RAG)**
 A fully offline RAG assistant for employee handbooks, HR policies, IT-use guidelines and compliance SOPs, so confidential documents never leave local infrastructure. It loads PDF/DOCX/TXT, uses overlapping chunks, local `nomic-embed-text` embeddings and ChromaDB top-K retrieval, and answers with Llama 3.1 8B through a grounded prompt. **Every answer cites its source file and chunk.**
 <br>`Python` `LangChain` `Ollama` `ChromaDB` `Jupyter` `uv`
 
