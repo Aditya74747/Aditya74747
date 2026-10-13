@@ -35,6 +35,7 @@ A fully offline RAG assistant for employee handbooks, HR policies, IT-use guidel
 **Data Analyst (ML Engineer) · Leejam Sports Company** · Riyadh, KSA · *Feb 2025 – Feb 2026*
 - Built and productionized churn-prediction models on behavioural data from 250,000+ monthly members, identifying high-risk segments for targeted retention campaigns.
 - Developed an automated LLM pipeline (OpenAI APIs + open-source models) that extracts, categorizes and summarizes customer concerns from Instagram, Facebook and Twitter.
+
 **Application Developer · Accenture** · Pune, IND · *Oct 2024 – Feb 2025*
 - Added chatbot interfaces and AI workloads to enterprise applications using REST and OpenAI APIs.
 - Deployed the AI features on Azure (App Services, Azure Functions) through Azure DevOps CI/CD, with GDPR-aligned security practices for the data they processed.
