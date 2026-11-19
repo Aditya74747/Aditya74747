@@ -81,6 +81,15 @@ A fully offline Retrieval-Augmented Generation assistant for confidential HR, em
 ## Other Projects
 
 <!-- AUTO-PROJECTS-START -->
+| Project | Description | Language | Stars | Last Updated |
+|---|---|---|---:|---|
+| [lorawan-gateway-planner](https://github.com/Aditya74747/lorawan-gateway-planner) | 3D digital twin that finds the fewest LoRaWAN gateway sites to hear every water meter in Heilbronn · Future City Hackathon 2026 · Team Odyssey | Python | 1 | 2026-11-17 |
+| [dax-intraday-analysis](https://github.com/Aditya74747/dax-intraday-analysis) | Backtesting study of when to invest in Germany's DAX index (^GDAXI). Tests lump sum vs. monthly buying, dip-buying, weekday and hour-of-day timing on 17 years of daily and 2 years of hourly data, with a €1 fee per trade, 43,758 exhaustive splits and 200,000 Monte Carlo plans. Python, pandas | Python | 0 | 2026-11-02 |
+| [legal-contract-analysis-ai](https://github.com/Aditya74747/legal-contract-analysis-ai) | Fine-tuned DistilBERT that detects 48 clause types in legal contracts and flags risky clauses with a risk score. Trained on the CUAD dataset (89.8% accuracy). Gradio web UI with PDF, DOCX and TXT upload. | Jupyter Notebook | 0 | 2026-10-21 |
+| [termite-swarm-cooling](https://github.com/Aditya74747/termite-swarm-cooling) | Swarm intelligence simulation of self-organising data center cooling, inspired by termite mounds. 24 rack agents coordinate through stigmergy with no central controller. Python/Flask backend plus a standalone browser version. | HTML | 0 | 2026-10-21 |
+| [hr-policy-rag](https://github.com/Aditya74747/hr-policy-rag) | AI-powered RAG system for answering employee policy and compliance questions using official HR documents. Retrieves relevant policy sections and generates accurate, citation-backed responses to ensure reliability and reduce HR dependency. | Jupyter Notebook | 0 | 2026-10-19 |
+| [AutoPartsIMS](https://github.com/Aditya74747/AutoPartsIMS) | Desktop inventory management system for automotive spare parts, built with Java Swing and MySQL. Includes role-based access, triggers, stored procedures and transactions. | Java | 0 | 2026-10-19 |
+| [mcp-agent-database](https://github.com/Aditya74747/mcp-agent-database) | AI agent with three MCP servers (SQL, document search, files) that asks for human approval before changing anything. Runs locally on Ollama, or on Claude or OpenAI. | Python | 0 | 2026-10-19 |
 <!-- AUTO-PROJECTS-END -->
 
 *Automatically generated from my public GitHub repositories. New projects are added as I publish them.*
