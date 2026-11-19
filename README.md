@@ -1,6 +1,6 @@
 # Aditya Ghatage
 
-### Machine Learning Engineer | LLM Agents · RAG · Applied AI
+### Machine Learning Engineer | Applied ML · LLM Agents · RAG · Generative AI
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/ghatage)
 [![Medium](https://img.shields.io/badge/Medium-Articles-12100E?style=flat-square&logo=medium)](https://medium.com/@apghatage)
@@ -13,39 +13,36 @@
 
 ## About Me
 
-I'm a Machine Learning Engineer interested in building AI systems that work beyond proof-of-concepts.
+I'm a Machine Learning Engineer with 3+ years of experience building and deploying machine learning, deep learning, and Generative AI solutions.
 
-My experience spans applied machine learning, LLM-powered applications, information retrieval, and AI integration. I've worked with behavioural datasets covering **250,000+ monthly members**, developed automated pipelines for extracting insights from social-media feedback, and integrated AI capabilities into enterprise applications.
+My experience spans predictive modelling, NLP, LLM applications, RAG systems, and AI agents. I've developed churn-prediction systems, built automated ML and data pipelines, integrated foundation models into enterprise applications, and engineered AI systems with a focus on reliability, privacy, and production readiness.
 
-Currently, I'm particularly interested in:
+Some areas I've worked on:
 
-- **AI Agents & MCP:** Building tool-using agents with controlled access to data and systems.
-- **RAG & Information Retrieval:** Improving retrieval quality, grounding, and source attribution.
-- **Local & Private AI:** Running LLM applications locally for privacy-sensitive workloads.
-- **Applied ML:** Developing predictive models that translate data into actionable business decisions.
-- **AI Evaluation & Safety:** Measuring reliability, preventing unsafe actions, and testing systems against adversarial inputs.
+- **Applied Machine Learning:** Predictive modelling, classification, churn prediction, feature engineering, and behavioural analytics.
+- **LLMs & Generative AI:** OpenAI APIs, LangChain, LangGraph, prompt engineering, and foundation-model integration.
+- **AI Agents & MCP:** Building tool-using agents with controlled access to databases, documents, and files.
+- **RAG & Information Retrieval:** Embeddings, vector databases, hybrid search, and source-grounded responses.
+- **Data Engineering & MLOps:** Data pipelines, OCR-based datasets, batch processing, deployment, monitoring, and CI/CD.
+- **Responsible AI:** GDPR-aligned AI applications, input/output filtering, human approval, and AI safety.
 
-I enjoy taking an idea from experimentation to a working application, with an emphasis on practical engineering, measurable results, and responsible AI.
+Currently pursuing an M.Sc. in Software Technology at HFT Stuttgart, Germany.
 
 ---
 
 ## Featured Projects
 
-Projects I'm particularly proud of:
-
 ### 1. [MCP Agent Database](https://github.com/Aditya74747/mcp-agent-database)
 
-An AI agent connected to three custom MCP servers:
+An AI agent backed by three custom MCP servers, enabling LLMs to interact with structured data, documents, and files.
 
-- DuckDB SQL server for structured data.
-- Hybrid BM25 + embedding-based document search.
+**Key engineering highlights:**
+- DuckDB SQL server for structured database queries.
+- Hybrid BM25 + embedding-based document retrieval.
 - Sandboxed file workspace.
-
-**Engineering highlights:**
-- Human approval required for non-read-only operations.
+- Human approval for non-read-only operations.
 - SQL validation through parsing rather than pattern matching.
-- Sandboxed file access and JSONL audit logging.
-- Tested against prompt-injection documents.
+- JSONL audit logging and prompt-injection testing.
 
 **Evaluation:** 79% overall success across 14 tasks, 100% safety, and zero unsafe actions using Qwen3 8B.
 
@@ -53,100 +50,125 @@ An AI agent connected to three custom MCP servers:
 
 ### 2. [Legal Contract Analysis AI](https://github.com/Aditya74747/legal-contract-analysis-ai)
 
-A fine-tuned DistilBERT model for contract clause classification and risk identification.
+A fine-tuned DistilBERT-based NLP application for automated legal contract analysis and risk identification.
 
-- Processes PDF, DOCX and TXT contracts.
-- Classifies 48 clause categories, including Governing Law, Non-Compete and Uncapped Liability.
-- Combines three CUAD annotation formats into 20,744 cleaned training examples.
-- Includes per-class F1 evaluation, confusion matrix and error analysis.
-- Provides a Gradio interface and CLI.
+- Detects 48 legal clause categories, including Governing Law, Non-Compete, and Uncapped Liability.
+- Trained using 20,744 cleaned clauses from the CUAD dataset.
+- Processes PDF, DOCX, and TXT contracts.
+- Identifies potentially risky clauses and generates an overall risk score.
+- Includes per-class F1 evaluation, confusion matrix, and error analysis.
+- Gradio web interface and CLI.
 
 **Evaluation:** 89.8% test accuracy and 0.89 weighted F1 across 48 classes.
 
-`Python` `PyTorch` `Transformers` `DistilBERT` `Gradio` `scikit-learn`
+`Python` `PyTorch` `Hugging Face Transformers` `DistilBERT` `Gradio` `scikit-learn`
 
-### 3. [HR Policy RAG](https://github.com/Aditya74747/hr-policy-rag)
+### 3. [Privacy-First RAG Assistant](https://github.com/Aditya74747/hr-policy-rag)
 
-A fully local RAG assistant designed for confidential HR documents and internal company policies.
+A fully offline Retrieval-Augmented Generation assistant for confidential HR, employee handbook, and compliance documents.
 
-- Supports PDF, DOCX and TXT documents.
-- Uses overlapping document chunks and local embeddings.
-- ChromaDB-powered top-K retrieval.
-- Generates grounded answers using Llama 3.1 8B through Ollama.
-- Includes source-file and document-chunk citations.
+- Supports PDF, DOCX, and TXT documents.
+- Uses local embedding models and document chunking.
+- ChromaDB-powered semantic retrieval.
+- Generates grounded responses using Llama 3.1 8B through Ollama.
+- Provides source-file and document-chunk citations.
+- Designed to keep confidential documents within local infrastructure.
 
-`Python` `LangChain` `Ollama` `ChromaDB` `Jupyter`
+`Python` `LangChain` `Ollama` `ChromaDB` `RAG`
 
 ---
 
-## All Other Projects
+## Other Projects
 
 <!-- AUTO-PROJECTS-START -->
-| Project | Description | Language | Stars | Last Updated |
-|---|---|---|---:|---|
-| [lorawan-gateway-planner](https://github.com/Aditya74747/lorawan-gateway-planner) | 3D digital twin that finds the fewest LoRaWAN gateway sites to hear every water meter in Heilbronn · Future City Hackathon 2026 · Team Odyssey | Python | 1 | 2026-11-17 |
-| [dax-intraday-analysis](https://github.com/Aditya74747/dax-intraday-analysis) | Backtesting study of when to invest in Germany's DAX index (^GDAXI). Tests lump sum vs. monthly buying, dip-buying, weekday and hour-of-day timing on 17 years of daily and 2 years of hourly data, with a €1 fee per trade, 43,758 exhaustive splits and 200,000 Monte Carlo plans. Python, pandas | Python | 0 | 2026-11-02 |
-| [legal-contract-analysis-ai](https://github.com/Aditya74747/legal-contract-analysis-ai) | Fine-tuned DistilBERT that detects 48 clause types in legal contracts and flags risky clauses with a risk score. Trained on the CUAD dataset (89.8% accuracy). Gradio web UI with PDF, DOCX and TXT upload. | Jupyter Notebook | 0 | 2026-10-21 |
-| [termite-swarm-cooling](https://github.com/Aditya74747/termite-swarm-cooling) | Swarm intelligence simulation of self-organising data center cooling, inspired by termite mounds. 24 rack agents coordinate through stigmergy with no central controller. Python/Flask backend plus a standalone browser version. | HTML | 0 | 2026-10-21 |
-| [hr-policy-rag](https://github.com/Aditya74747/hr-policy-rag) | AI-powered RAG system for answering employee policy and compliance questions using official HR documents. Retrieves relevant policy sections and generates accurate, citation-backed responses to ensure reliability and reduce HR dependency. | Jupyter Notebook | 0 | 2026-10-19 |
-| [AutoPartsIMS](https://github.com/Aditya74747/AutoPartsIMS) | Desktop inventory management system for automotive spare parts, built with Java Swing and MySQL. Includes role-based access, triggers, stored procedures and transactions. | Java | 0 | 2026-10-19 |
-| [mcp-agent-database](https://github.com/Aditya74747/mcp-agent-database) | AI agent with three MCP servers (SQL, document search, files) that asks for human approval before changing anything. Runs locally on Ollama, or on Claude or OpenAI. | Python | 0 | 2026-10-19 |
 <!-- AUTO-PROJECTS-END -->
 
-*This section is automatically generated from my public GitHub repositories. New projects are added without manually editing this README.*
+*Automatically generated from my public GitHub repositories. New projects are added as I publish them.*
 
 ---
 
 ## Professional Experience
 
-**Data Analyst (ML Engineer) · Leejam Sports Company**  
+### Machine Learning Engineer · Leejam Sports Company
 Riyadh, Saudi Arabia · February 2025 – February 2026
 
-- Built and productionized churn-prediction models using behavioural data from 250,000+ monthly members to identify high-risk customer segments.
-- Developed automated LLM pipelines using OpenAI APIs and open-source models to extract, categorize and summarize customer feedback from Instagram, Facebook and Twitter.
+- Built and deployed a Random Forest-based churn-prediction system to identify high-risk gym members and support targeted retention initiatives.
+- Developed OCR-based datasets and batch machine learning pipelines to deliver predictive member insights to the company's application.
+- Built an LLM-based NLP pipeline using text embeddings to extract, categorize, and summarize customer feedback from social media.
 
-**Application Developer · Accenture**  
+### AI Application Developer · Accenture
 Pune, India · October 2024 – February 2025
 
-- Integrated chatbot interfaces and AI workloads into enterprise applications using REST APIs and OpenAI APIs.
-- Deployed AI features on Microsoft Azure using App Services, Azure Functions and Azure DevOps CI/CD.
-- Applied GDPR-aligned security practices to the data processed by these applications.
+- Integrated Generative AI features into enterprise applications using OpenAI APIs and LangChain, streamlining prompt workflows.
+- Developed wrappers around foundation models to securely incorporate enterprise data into Generative AI pipelines.
+- Implemented input/output filtering for user-facing AI chatbot interfaces.
+- Followed GDPR-aligned data protection practices while collaborating with cross-functional teams.
+
+### Data Science Specialist · Skyrise Education
+Remote · March 2023 – August 2024
+
+- Built data preprocessing and feature-extraction pipelines using Pandas, NumPy, and SQL for student behavioural datasets.
+- Developed and optimized machine learning classification models to predict student enrollment and course dropout.
+- Created data-ingestion scripts to integrate processed datasets into existing CRM systems.
+- Followed Agile development practices and clean-code principles.
+
+---
+
+## Education
+
+**M.Sc. Software Technology**  
+Hochschule für Technik (HFT), Stuttgart, Germany · March 2026 – Present
+
+**B.E. Artificial Intelligence & Data Science**  
+Pune University, India · 2020 – 2024
 
 ---
 
 ## Research & Recognition
 
-- **Registered Software Copyright – Government of India:** "Sentiment Analysis using Lexicon Based Approach and Algorithms with Large Language Model Implementation" (SW-18871/2024, May 2024), co-authored with faculty supervisors.
-- **B.E. Artificial Intelligence & Data Science:** Pune University · GPA 9.2/10.
+- **Registered Software Copyright – Government of India:** "Sentiment Analysis using Lexicon Based Approach and Algorithms with Large Language Model Implementation" · Registration No. SW-18871/2024 · May 2024. Co-authored with faculty supervisors.
+- **Bachelor's Degree:** Artificial Intelligence & Data Science · Pune University.
 
 ---
 
 ## Technical Skills
 
-**AI, LLMs & Retrieval**
+**Programming Languages**
 
-`LLM Applications` `AI Agents` `MCP` `RAG` `LangChain` `Hugging Face` `Transformers` `OpenAI API` `Ollama` `ChromaDB` `NLTK` `spaCy`
+`Python` `SQL` `Java` `TypeScript`
 
-**Machine Learning & Data Science**
+**Machine Learning & Deep Learning**
 
-`Python` `PyTorch` `TensorFlow` `Scikit-learn` `Pandas` `NumPy` `SQL` `Apache Spark` `Databricks` `DuckDB` `MLflow`
+`PyTorch` `TensorFlow` `Scikit-learn` `Pandas` `NumPy` `Deep Learning` `NLP` `Computer Vision`
 
-**Databases & Analytics**
+**LLMs & Generative AI**
 
-`PostgreSQL` `MySQL` `MongoDB` `Power BI` `Tableau`
+`OpenAI API` `Hugging Face` `LangChain` `LangGraph` `RAG` `Embeddings` `Prompt Engineering` `MCP` `Ollama` `Vector Databases`
 
-**Backend, Cloud & Engineering**
+**Data Engineering & MLOps**
 
-`FastAPI` `Flask` `Gradio` `Java` `Docker` `Azure` `AWS` `Azure DevOps` `GitHub Actions` `pytest` `Git` `Jupyter`
+`PySpark` `Data Pipelines` `MLOps` `Monitoring & Observability` `A/B Testing`
+
+**Backend & Cloud**
+
+`FastAPI` `REST APIs` `Docker` `Kubernetes` `AWS` `Google Cloud` `Azure`
+
+**Tools & Methodologies**
+
+`Git` `GitLab` `GitHub Actions` `Power BI` `Agile` `Scrum`
 
 ---
 
 ## Let's Connect
 
-I'm interested in collaborating on practical AI/ML projects, LLM agents, retrieval systems, and applied machine learning.
+I'm interested in opportunities and collaborations involving applied machine learning, Generative AI, LLM agents, and production AI systems.
 
-If you're building something interesting or looking for an engineer who enjoys turning AI concepts into working systems, let's connect.
+I enjoy working on problems where machine learning and AI can translate into practical, measurable business impact.
 
-📧 [apghatage@gmail.com](mailto:apghatage@gmail.com)  
-💼 [LinkedIn](https://linkedin.com/in/ghatage)  
+📧 [apghatage@gmail.com](mailto:apghatage@gmail.com)
+
+💼 [LinkedIn](https://linkedin.com/in/ghatage)
+
 💻 [GitHub](https://github.com/Aditya74747)
+
+✍️ [Medium](https://medium.com/@apghatage)
