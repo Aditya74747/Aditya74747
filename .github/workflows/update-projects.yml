@@ -26,6 +26,12 @@ jobs:
           script: |
             const fs = require('fs');
 
+            const featured = [
+              'mcp-agent-database',
+              'legal-contract-analysis-ai',
+              'hr-policy-rag'
+            ];
+
             const repos = await github.paginate(
               github.rest.repos.listForUser,
               {
@@ -41,7 +47,8 @@ jobs:
                 !repo.fork &&
                 !repo.archived &&
                 !repo.private &&
-                repo.name !== context.repo.owner
+                repo.name !== context.repo.owner &&
+                !featured.includes(repo.name)
               )
               .sort((a, b) =>
                 new Date(b.updated_at) - new Date(a.updated_at)
@@ -55,23 +62,25 @@ jobs:
             let content = '';
 
             if (projects.length === 0) {
-              content = 'No public projects available yet.';
+              content = 'No additional public projects yet.';
             } else {
               content = [
-                '| Project | Description | Language | Stars | Last Updated |',
-                '|---|---|---|---:|---|',
+                '| Project | Description | Language | Last Updated |',
+                '|---|---|---|---|',
                 ...projects.map(repo => {
                   const description = escape(
                     repo.description || 'No description available.'
                   );
 
-                  const language = escape(repo.language || 'N/A');
+                  const language = escape(
+                    repo.language || 'N/A'
+                  );
 
                   const updated = new Date(
                     repo.updated_at
                   ).toISOString().slice(0, 10);
 
-                  return `| [${escape(repo.name)}](${repo.html_url}) | ${description} | ${language} | ${repo.stargazers_count} | ${updated} |`;
+                  return `| [${escape(repo.name)}](${repo.html_url}) | ${description} | ${language} | ${updated} |`;
                 })
               ].join('\n');
             }
@@ -82,14 +91,18 @@ jobs:
             const start = '<!-- AUTO-PROJECTS-START -->';
             const end = '<!-- AUTO-PROJECTS-END -->';
 
-            if (!readme.includes(start) || !readme.includes(end)) {
+            if (
+              !readme.includes(start) ||
+              !readme.includes(end)
+            ) {
               throw new Error('Project section markers not found.');
             }
 
             const before = readme.split(start)[0];
             const after = readme.split(end).slice(1).join(end);
 
-            readme = `${before}${start}\n${content}\n${end}${after}`;
+            readme =
+              `${before}${start}\n${content}\n${end}${after}`;
 
             fs.writeFileSync(readmePath, readme);
 
