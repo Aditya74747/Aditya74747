@@ -83,6 +83,7 @@ A fully offline Retrieval-Augmented Generation assistant for confidential HR, em
 <!-- AUTO-PROJECTS-START -->
 | Project | Description | Language | Last Updated |
 |---|---|---|---|
+| [kilowise](https://github.com/Aditya74747/kilowise) | No description available. | Python | 2026-11-21 |
 | [lorawan-gateway-planner](https://github.com/Aditya74747/lorawan-gateway-planner) | 3D digital twin that finds the fewest LoRaWAN gateway sites to hear every water meter in Heilbronn · Future City Hackathon 2026 · Team Odyssey | Python | 2026-11-17 |
 | [dax-intraday-analysis](https://github.com/Aditya74747/dax-intraday-analysis) | Backtesting study of when to invest in Germany's DAX index (^GDAXI). Tests lump sum vs. monthly buying, dip-buying, weekday and hour-of-day timing on 17 years of daily and 2 years of hourly data, with a €1 fee per trade, 43,758 exhaustive splits and 200,000 Monte Carlo plans. Python, pandas | Python | 2026-11-02 |
 | [termite-swarm-cooling](https://github.com/Aditya74747/termite-swarm-cooling) | Swarm intelligence simulation of self-organising data center cooling, inspired by termite mounds. 24 rack agents coordinate through stigmergy with no central controller. Python/Flask backend plus a standalone browser version. | HTML | 2026-10-21 |
