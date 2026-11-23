@@ -32,28 +32,57 @@ Currently pursuing an M.Sc. in Software Technology at HFT Stuttgart, Germany.
 
 ## Featured Projects
 
-### 1. [MCP Agent Database](https://github.com/Aditya74747/mcp-agent-database)
+### 1. [Kilowise: Cost, Energy & CO₂ Ledger for IT](https://github.com/Aditya74747/kilowise)
+
+*sprintd Basel 2026 · Green AI & Data case (ALTYCA) · Team Mini Militia* · [Live app](https://aditya74747.github.io/kilowise/app/index.html) · [Demo video](https://aditya74747.github.io/kilowise/pitch/assets/kilowise_demo_voice.mp4)
+
+Turns a small company's IT exports (cloud invoices, servers, AI usage, SaaS contracts) into one ledger of cost, energy, and location-based CO₂. It then recommends a package of measures that hits the targets without switching off anything critical.
+
+- Data pipeline that cleans and combines 28 messy exports (duplicates, three currencies, mixed date formats and units) into a traceable ledger, with every factor linked to one of 59 sources.
+- 12 recommended measures: **−48.8% CO₂** (target −40%) and **−33.4% cost** (CHF 155k/year) within a 15 person-day budget.
+- Safety checks: every schedule change is replayed against 3,811 real job runs (**0 conflicts**), and instructions hidden in the data are quarantined, never acted on.
+- **"Ask Kilo" assistant:** Qwen2.5-1.5B with a LoRA adapter we fine-tuned, plus retrieval over the ledger and a check of every figure in each answer. Scored **0.815 vs. 0.276** for the base model on 181 held-out questions.
+- 11-page web app with dashboards, a forecast, comparisons of ML models and 20 LLMs, and read-only connectors for AWS, Azure, OpenAI, Claude, and Microsoft 365.
+
+`Python` `pandas` `scikit-learn` `PyTorch` `LoRA / PEFT` `Transformers` `RAG` `JavaScript` `pytest`
+
+### 2. [LoRaWAN Gateway Planner: 3D Digital Twin](https://github.com/Aditya74747/lorawan-gateway-planner)
+
+*Future City Hackathon 2026 · HNVG challenge · Team Odyssey* · [Live demo](https://lorawan-gateway-planner.netlify.app/)
+
+A 3D digital twin of Heilbronn that learns from real radio data and finds the fewest gateway sites that still hear almost every water meter in the city.
+
+- Line-of-sight features computed for every meter-to-gateway path from 83,000 buildings, terrain, and tree canopy in official open geodata.
+- Compared 13 learners using leave-one-gateway-out validation. A **CatBoost** ensemble with monotonic constraints won (**AUC 0.961** on unseen gateways, RSSI error 3.5 dB vs. 4.8 dB for the textbook model).
+- Greedy optimiser with pruning and swaps: **27 of 71 approved sites reach 98% coverage** (up from ≈46% today), with a build order.
+- Simulates gateway failures, plans for future districts from official building plans (XPlanung), and works for other cities from open data only (tested on Stuttgart).
+- Interactive 3D planner built with deck.gl and MapLibre, served by FastAPI.
+
+`Python` `CatBoost` `scikit-learn` `GeoPandas` `rasterio` `FastAPI` `deck.gl` `Docker`
+
+### 3. [MCP Agent Database](https://github.com/Aditya74747/mcp-agent-database)
 
 An AI agent backed by three custom MCP servers, enabling LLMs to interact with structured data, documents, and files.
 
 **Key engineering highlights:**
 - DuckDB SQL server for structured database queries.
 - Hybrid BM25 + embedding-based document retrieval.
-- Sandboxed file workspace.
+- Sandboxed file workspace with GitHub integration.
 - Human approval for non-read-only operations.
 - SQL validation through parsing rather than pattern matching.
 - JSONL audit logging and prompt-injection testing.
+- Runs fully locally through Ollama, or with Claude or OpenAI by changing one setting.
 
 **Evaluation:** 79% overall success across 14 tasks, 100% safety, and zero unsafe actions using Qwen3 8B.
 
 `Python` `MCP` `FastAPI` `DuckDB` `Ollama` `Docker` `pytest`
 
-### 2. [Legal Contract Analysis AI](https://github.com/Aditya74747/legal-contract-analysis-ai)
+### 4. [Legal Contract Analysis AI](https://github.com/Aditya74747/legal-contract-analysis-ai)
 
 A fine-tuned DistilBERT-based NLP application for automated legal contract analysis and risk identification.
 
 - Detects 48 legal clause categories, including Governing Law, Non-Compete, and Uncapped Liability.
-- Trained using 20,744 cleaned clauses from the CUAD dataset.
+- Built from 20,744 cleaned clauses from the CUAD dataset (stratified 80/10/10 split).
 - Processes PDF, DOCX, and TXT contracts.
 - Identifies potentially risky clauses and generates an overall risk score.
 - Includes per-class F1 evaluation, confusion matrix, and error analysis.
@@ -63,7 +92,7 @@ A fine-tuned DistilBERT-based NLP application for automated legal contract analy
 
 `Python` `PyTorch` `Hugging Face Transformers` `DistilBERT` `Gradio` `scikit-learn`
 
-### 3. [Privacy-First RAG Assistant](https://github.com/Aditya74747/hr-policy-rag)
+### 5. [Privacy-First RAG Assistant](https://github.com/Aditya74747/hr-policy-rag)
 
 A fully offline Retrieval-Augmented Generation assistant for confidential HR, employee handbook, and compliance documents.
 
