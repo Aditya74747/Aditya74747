@@ -25,6 +25,7 @@ jobs:
           script: |
             const fs = require('fs');
 
+            // Projects that already have their own section in the README.
             const featured = [
               'kilowise',
               'lorawan-gateway-planner',
@@ -33,14 +34,28 @@ jobs:
               'hr-policy-rag'
             ];
 
+            // Repos that are never listed (the portfolio is linked at the top instead).
+            const hidden = [
+              context.repo.owner.toLowerCase(),
+              `${context.repo.owner.toLowerCase()}.github.io`
+            ];
+
+            // Topics that say nothing about the project itself.
+            const plainTopics = [
+              'hackathon', 'hackathon-project', 'github-pages', 'python',
+              'javascript', 'java', 'html', 'jupyter-notebook'
+            ];
+
+            const acronyms = {
+              ai: 'AI', ml: 'ML', llm: 'LLM', rag: 'RAG', mcp: 'MCP', api: 'API',
+              sql: 'SQL', nlp: 'NLP', dax: 'DAX', lorawan: 'LoRaWAN', iot: 'IoT',
+              gis: 'GIS', ims: 'IMS', ui: 'UI', cli: 'CLI', ocr: 'OCR', '3d': '3D'
+            };
+            const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
             const repos = await github.paginate(
               github.rest.repos.listForUser,
-              {
-                username: context.repo.owner,
-                per_page: 100,
-                sort: 'updated',
-                direction: 'desc'
-              }
+              { username: context.repo.owner, per_page: 100, type: 'owner' }
             );
 
             const projects = repos
@@ -48,40 +63,62 @@ jobs:
                 !repo.fork &&
                 !repo.archived &&
                 !repo.private &&
-                repo.name !== context.repo.owner &&
-                !featured.includes(repo.name)
+                !hidden.includes(repo.name.toLowerCase()) &&
+                !featured.includes(repo.name) &&
+                !(repo.topics || []).includes('hide-from-portfolio')
               )
-              .sort((a, b) =>
-                new Date(b.updated_at) - new Date(a.updated_at)
-              );
+              // newest project first
+              .sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
             const escape = value =>
               String(value || '')
                 .replace(/\|/g, '\\|')
                 .replace(/\r?\n/g, ' ');
 
+            const title = name =>
+              name
+                .split(/[-_]+/)
+                .filter(Boolean)
+                .map(word => acronyms[word.toLowerCase()] ||
+                  word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+
+            const shorten = (text, max) =>
+              text.length <= max ? text : text.slice(0, max).replace(/\s+\S*$/, '').replace(/[\s.,;:·-]+$/, '') + '…';
+
             let content = '';
 
             if (projects.length === 0) {
-              content = 'No additional public projects yet.';
+              content = '*No additional public projects yet.*';
             } else {
               content = [
-                '| Project | Description | Language | Last Updated |',
-                '|---|---|---|---|',
+                '| Project | What it is |',
+                '|---|---|',
                 ...projects.map(repo => {
-                  const description = escape(
-                    repo.description || 'No description available.'
+                  const created = new Date(repo.created_at);
+                  const meta = [repo.language, `${months[created.getUTCMonth()]} ${created.getUTCFullYear()}`]
+                    .filter(Boolean)
+                    .join(' · ');
+
+                  const description = shorten(
+                    escape(repo.description || 'An open-source project on GitHub.'),
+                    170
                   );
 
-                  const language = escape(
-                    repo.language || 'N/A'
-                  );
+                  const topics = (repo.topics || [])
+                    .filter(topic => !plainTopics.includes(topic))
+                    .slice(0, 3)
+                    .map(topic => '`' + topic + '`')
+                    .join(' ');
 
-                  const updated = new Date(
-                    repo.updated_at
-                  ).toISOString().slice(0, 10);
+                  const demo = /^https:\/\//i.test(repo.homepage || '')
+                    ? `[Live demo](${repo.homepage})`
+                    : '';
 
-                  return `| [${escape(repo.name)}](${repo.html_url}) | ${description} | ${language} | ${updated} |`;
+                  const extras = [topics, demo].filter(Boolean).join(' · ');
+
+                  return `| **[${escape(title(repo.name))}](${repo.html_url})**<br><sub>${escape(meta)}</sub> | ` +
+                    `${description}${extras ? '<br>' + extras : ''} |`;
                 })
               ].join('\n');
             }
@@ -92,18 +129,14 @@ jobs:
             const start = '<!-- AUTO-PROJECTS-START -->';
             const end = '<!-- AUTO-PROJECTS-END -->';
 
-            if (
-              !readme.includes(start) ||
-              !readme.includes(end)
-            ) {
+            if (!readme.includes(start) || !readme.includes(end)) {
               throw new Error('Project section markers not found.');
             }
 
             const before = readme.split(start)[0];
             const after = readme.split(end).slice(1).join(end);
 
-            readme =
-              `${before}${start}\n${content}\n${end}${after}`;
+            readme = `${before}${start}\n${content}\n${end}${after}`;
 
             fs.writeFileSync(readmePath, readme);
 
